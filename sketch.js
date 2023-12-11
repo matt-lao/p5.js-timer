@@ -4,7 +4,7 @@ let backgroundColor;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  backgroundColor = color(0, 100, 0);
+  backgroundColor = color(0, 100, 0); // Green
 
   startButton = createButton('Start Timer');
   resetButton = createButton('Reset Timer');
@@ -63,11 +63,11 @@ function draw() {
     text(nf(elapsedHours, 2) + ':' + nf(elapsedMinutes, 2) + ':' + nf(elapsedSeconds, 2), width / 2, height / 2);
 
     if (elapsedMinutes >= 8 && elapsedMinutes < 10) {
-      backgroundColor = color(255, 191, 0);
+      backgroundColor = color(255, 191, 0); // Yellow
       customizeButton(startButton, backgroundColor);
       customizeButton(resetButton, backgroundColor);
     } else if (elapsedMinutes >= 10) {
-      backgroundColor = color(220, 166, 0);
+      backgroundColor = color(220, 166, 0); // Red
       customizeButton(startButton, backgroundColor);
       customizeButton(resetButton, backgroundColor);
     }
@@ -83,7 +83,7 @@ function startTimer() {
 
 function resetTimer() {
   timerIsRunning = false;
-  backgroundColor = color(0, 100, 0);
+  backgroundColor = color(0, 100, 0); // Green
   customizeButton(startButton, backgroundColor);
   customizeButton(resetButton, backgroundColor);
 }
